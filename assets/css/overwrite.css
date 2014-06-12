@@ -1,0 +1,34 @@
+@font-face {
+   font-family: 'RoyalChicken.otf';
+   src: url('RoyalChicken.otf'); /* IE9 Compat Modes */
+   src: url('RoyalChicken.otf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('RoyalChicken.otf') format('woff'), /* Modern Browsers */
+        url('RoyalChicken.otf')  format('truetype'), /* Safari, Android, iOS */
+        url('webfont.svg#RoyalChicken.otf') format('svg'); /* Legacy iOS */
+   }
+
+
+/*GLOBAL*/
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+}
+
+section header h1 {
+	color: #333;
+}
+
+
+/*NAV*/
+
+#header .navbar-inverse ul.nav a {
+		font-family: "HelveticaNeue-UltraLight", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
+
+.navbar-header span {
+	font-family: 'RoyalChicken.otf';
+	text-transform: none;
+	font-size: 80px;
+	line-height: 44px;
+}
