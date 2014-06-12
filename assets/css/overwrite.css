@@ -24,6 +24,10 @@ section header h1 {
 	font-size: 40px;
 }
 
+.isotope-item img {
+	width: 110%;
+}
+
 
 
 /*NAV*/
