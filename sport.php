@@ -1,9 +1,13 @@
+<?php 
+ include('inc/videos.php');
+?>
 <?php
 $pageTitle = "Sport | Kangkono";
 $video = "sport";
 include('assets/inc/header.php');
 
 ?>
+
 
 
 		<!-- WORK -->
@@ -18,161 +22,46 @@ include('assets/inc/header.php');
 				<div id="portfolio" class="text-center animate_fade_in">
 
 
+					
 					<div class="row">
 
 						<ul class="sort-destination isotope" data-sort-id="isotope-list">
 
+							<?php foreach(array_reverse($videos) as $video) { ; ?>
+								
+							<li class='isotope-item col-sm-6 col-md-4 <?php echo $video["type"]; ?>' 
+								style='<?php if($video["type"] == "life") { echo "display:none;";}
+											 if($video["type"] == "business") { echo "display:none;";} 
+									   ?>'
+							><!-- item -->
 
 
-
-							<!-- 1 --><li class="isotope-item col-sm-6 col-md-4 sport"><!-- item -->
-								<a class="popup-video" href="http://www.youtube.com/watch?v=i55Zs30ops8">
-									<img src="assets/images/thumbnails/sport_01.jpg" class="img-responsive" data-src="holder.js/#676767:#555555/auto/" alt="img" />
+								<a class="popup-video" href='<?php echo $video["video"]; ?>'>
+									<img src='<?php echo $video["img"]; ?>' class="img-responsive" data-src="holder.js/#676767:#555555/auto/" alt="img" />
 									<div class="caption">
 									
-										<h3>Amazing Highlights NCAA College Football 2012-2013</h3>
-										<p>SPORT</p>
+										<h3><?php echo $video["name"]; ?></h3>
+										<p><?php echo $video["type"]; ?></p>
 									</div>
 								</a>
 							</li>
 
-							<!-- 2 --><li class="isotope-item col-sm-6 col-md-4 sport"><!-- item -->
-								<a class="popup-video" href="http://www.youtube.com/watch?v=Suas0jhcPNI">
-									<img src="assets/images/thumbnails/sport_02.jpg" class="img-responsive" data-src="holder.js/#676767:#555555/auto/" alt="img" />
+							<?php } ?>
+
+
+
+
+
+
+							<!-- <li class="isotope-item col-sm-6 col-md-4 sport" --><!-- item -->
+							<!-- 	<a class="popup-video" href="http://vimeo.com/23630702">
+									<img src="assets/images/1x1.png" class="img-responsive" data-src="holder.js/360x360/#676767:#555555/auto/" alt="img" />
 									<div class="caption">
 									
-										<h3>Bill Withers visits USC Trojans team meeting</h3>
-										<p>SPORT</p>
+										
 									</div>
 								</a>
-							</li>
-
-							<!-- 3 --><li class="isotope-item col-sm-6 col-md-4 sport"><!-- item -->
-								<a class="popup-video" href="http://www.youtube.com/watch?v=ZXR4hdclnBE">
-									<img src="assets/images/thumbnails/sport_03.jpg" class="img-responsive" data-src="holder.js/#676767:#555555/auto/" alt="img" />
-									<div class="caption">
-									
-										<h3>USC Football - Ray Lewis Speaks to the Team</h3>
-										<p>Youtube Video</p>
-									</div>
-								</a>
-							</li>
-
-							<!-- 4 --><li class="isotope-item col-sm-6 col-md-4 sport"><!-- item -->
-								<a class="popup-video" href="http://www.youtube.com/watch?v=RWyr8SOh4dk">
-									<img src="assets/images/thumbnails/sport_04.jpg" class="img-responsive" data-src="holder.js/#676767:#555555/auto/" alt="img" />
-									<div class="caption">
-									
-										<h3>All Blacks - Rugby World Cup 2007</h3>
-										<p>SPORT</p>
-									</div>
-								</a>
-							</li>
-							
-
-
-							<!-- 7 --><li class="isotope-item col-sm-6 col-md-4 sport"><!-- item -->
-								<a class="popup-video" href="http://www.youtube.com/watch?v=JphKPhW_m68">
-									<img src="assets/images/1x1.png" class="img-responsive" data-src="holder.js/360x360/#676767:#555555/auto/" alt="img" />
-									<div class="caption">
-									<!-- 
-										<h3>PROJECT TITLE</h3>
-										<p>Youtube Video</p> -->
-									</div>
-								</a>
-							</li>
-
-
-							<!-- 9 --><li class="isotope-item col-sm-6 col-md-4 sport"><!-- item -->
-								<a class="popup-video" href="http://www.youtube.com/watch?v=-xSlBX32jx0">
-									<img src="assets/images/thumbnails/sport_06.jpg" class="img-responsive" data-src="holder.js/#676767:#555555/auto/" alt="img" />
-									<div class="caption">
-									
-										<h3>Inside Oregon's Football Performance Center</h3>
-										<p>SPORT</p>
-									</div>
-								</a>
-							</li>
-
-
-
-							<!-- 14 --><li class="isotope-item col-sm-6 col-md-4 sport"><!-- item -->
-								<a class="popup-video" href="http://www.youtube.com/watch?v=WO4tIrjBDkk">
-									<img src="assets/images/thumbnails/sport_05.jpg" class="img-responsive" data-src="holder.js/#676767:#555555/auto/" alt="img" />
-									<div class="caption">
-									<h3>Al Pacino's Inspirational Speech</h3>
-										<p>SPORT</p>
-									</div>
-								</a>
-							</li>
-
-
-							<!-- 15 --><li class="isotope-item col-sm-6 col-md-4 sport"><!-- item -->
-								<a class="popup-video" href="http://www.youtube.com/watch?v=mWJs2Gof538">
-									<img src="assets/images/1x1.png" class="img-responsive" data-src="holder.js/360x360/#676767:#555555/auto/" alt="img" />
-									<div class="caption">
-									<!-- 
-										<h3>PROJECT TITLE</h3>
-										<p>Youtube Video</p> -->
-									</div>
-								</a>
-							</li>
-
-
-							<!-- 18 --><li class="isotope-item col-sm-6 col-md-4 sport"><!-- item -->
-								<a class="popup-video" href="http://www.youtube.com/watch?v=0pHqw4XZhPE">
-									<img src="assets/images/1x1.png" class="img-responsive" data-src="holder.js/360x360/#676767:#555555/auto/" alt="img" />
-									<div class="caption">
-									<!-- 
-										<h3>PROJECT TITLE</h3>
-										<p>Youtube Video</p> -->
-									</div>
-								</a>
-							</li>
-
-							<!-- 19 --><li class="isotope-item col-sm-6 col-md-4 sport"><!-- item -->
-								<a class="popup-video" href="http://www.youtube.com/watch?v=Qv54oLWz5UE">
-									<img src="assets/images/1x1.png" class="img-responsive" data-src="holder.js/360x360/#676767:#555555/auto/" alt="img" />
-									<div class="caption">
-									<!-- 
-										<h3>PROJECT TITLE</h3>
-										<p>Youtube Video</p> -->
-									</div>
-								</a>
-							</li>
-
-							<!-- 20 --><li class="isotope-item col-sm-6 col-md-4 sport"><!-- item -->
-								<a class="popup-video" href="http://www.youtube.com/watch?v=D9-WejPDRyY">
-									<img src="assets/images/1x1.png" class="img-responsive" data-src="holder.js/360x360/#676767:#555555/auto/" alt="img" />
-									<div class="caption">
-									<!-- 
-										<h3>PROJECT TITLE</h3>
-										<p>Youtube Video</p> -->
-									</div>
-								</a>
-							</li>
-
-							<!-- 21 --><li class="isotope-item col-sm-6 col-md-4 sport"><!-- item -->
-								<a class="popup-video" href="http://www.youtube.com/watch?v=3j_jSE6-iPo">
-									<img src="assets/images/1x1.png" class="img-responsive" data-src="holder.js/360x360/#676767:#555555/auto/" alt="img" />
-									<div class="caption">
-									<!-- 
-										<h3>PROJECT TITLE</h3>
-										<p>Youtube Video</p> -->
-									</div>
-								</a>
-							</li>
-
-							<!-- 22 --><li class="isotope-item col-sm-6 col-md-4 sport"><!-- item -->
-								<a class="popup-video" href="http://www.youtube.com/watch?v=P-iLDlrpwSY">
-									<img src="assets/images/1x1.png" class="img-responsive" data-src="holder.js/360x360/#676767:#555555/auto/" alt="img" />
-									<div class="caption">
-									<!-- 
-										<h3>PROJECT TITLE</h3>
-										<p>Youtube Video</p> -->
-									</div>
-								</a>
-							</li>
+							</li> -->
 
 
 
@@ -190,6 +79,7 @@ include('assets/inc/header.php');
 						</ul>
 					</div>
 
+				</div>
 				</div>
 
 			

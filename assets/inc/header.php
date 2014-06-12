@@ -14,6 +14,7 @@
 
 		<!-- GOOGLE FONTS -->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800|Dosis:300,400" rel="stylesheet" type="text/css" />
+		<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
 
 
 		<!-- CORE CSS FRAMEWORK -->
@@ -31,6 +32,9 @@
 		<link href="assets/css/framework.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/typography.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+		<!-- Animate CSS -->
+		<link href="assets/css/animate.css" rel="stylesheet" type="text/css" />
 
 		<!-- OVERWRITE -->
 		<link href="assets/css/overwrite.css" rel="stylesheet" type="text/css" />
@@ -61,15 +65,15 @@
 		<section id="home" class="full-screen video" style="background-image:url('assets/images/preview/slider/vision.jpg');"><!-- background used for mobiles or error/not loading -->
 
 			<!-- video audio icon -->
-			<a href="#" id="video-volume"><i class="fa fa-volume-down"></i></a>
+			<a href="#" id="video-volume" class="animated fadeInUp delay-5"><i class="fa fa-volume-down "></i></a>
 
 			<!-- Video Background - replace videoURL with your youtube video URL -->
 			<a id="YTPlayer" class="player" 
 			data-property="{videoURL:'<?php 
 											if ($video == "index") {echo "https://www.youtube.com/watch?v=9d8wWcJLnFI";}
 											elseif ($video == "life") {echo "https://www.youtube.com/watch?v=FG0fTKAqZ5g";}
-									        elseif ($video == "sport") {echo "https://www.youtube.com/watch?v=fcacnNFiEh0";}
-									        elseif ($video == "business") {echo "https://www.youtube.com/watch?v=_A23DoI7D1A";}
+									        elseif ($video == "sport") {echo "https://www.youtube.com/watch?v=W5WZmJ2th4I";}
+									        /*elseif ($video == "business") {echo "https://www.youtube.com/watch?v=G_XEy2oNdPk";}*/
 									  ?>'
 			,containment:'body',autoPlay:true, mute:true, startAt:10, opacity:1}">youtube</a>
 			<!--/Video Background -->
@@ -79,7 +83,7 @@
 			<!-- Caption -->
 			<div class="image-caption">
 				<div class="inner">
-					<img src="assets/images/logo/home.png" class="img-responsive" alt="" />
+					<img src="assets/images/logo/home.png" class="img-responsive animated fadeInUp duration-4 delay-1" alt="" />
 				</div>
 			</div>
 
@@ -91,7 +95,7 @@
 		<!-- Main Nav -->
 		<header id="header">
 
-			<nav class="navbar navbar-inverse" role="navigation"><!-- add "wihite" class for white nav bar -->
+			<nav class="navbar navbar-inverse animated slideInUp" role="navigation"><!-- add "wihite" class for white nav bar -->
 				<div class="container">
 
 					<!-- Mobile Menu Button -->
@@ -99,7 +103,7 @@
 
 					<!-- Brand and toggle get grouped for better mobile display -->
 					<div class="navbar-header">
-						<a class="navbar-brand scrollTo" href="#home">
+						<a class="navbar-brand scrollTo" href="index.php">
 							<!-- <img src="assets/images/logo/100x100/white.png" alt="" width="50" height="50" />  -->
 							<!--
 								Span class:
@@ -125,7 +129,7 @@
 							<li><a href="index.php" >Home</a></li>
 							<li><a href="life.php">LIFE</a></li>
 							<li><a href="sport.php">SPORT</a></li>
-							<li><a href="business.php">BUSINESS</a></li>
+							<!-- <li><a href="business.php">BUSINESS</a></li> -->
 						</ul>
 					</div><!-- /.navbar-collapse -->
 

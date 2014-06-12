@@ -19,6 +19,12 @@ section header h1 {
 	color: #333;
 }
 
+.about-text p{
+	font-family: 'Great Vibes', cursive;
+	font-size: 40px;
+}
+
+
 
 /*NAV*/
 
@@ -31,4 +37,20 @@ section header h1 {
 	text-transform: none;
 	font-size: 80px;
 	line-height: 44px;
+}
+
+.delay-1 {
+	-moz-animation-delay: 2s;
+	-webkit-animation-delay: 2s;
+	animation-delay: 2s;
+}
+.delay-5 {
+	-moz-animation-delay: 5s;
+	-webkit-animation-delay: 5s;
+	animation-delay: 5s;
+}
+.duration-4 {
+	-webkit-animation-duration: 4s;
+	-moz-animation-duration: 4s;
+	animation-duration: 4s;
 }

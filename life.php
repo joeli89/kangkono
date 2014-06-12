@@ -1,3 +1,6 @@
+<?php 
+ include('inc/videos.php');
+?>
 <?php
 $pageTitle = "Life | Kangkono";
 $video = "life";
@@ -19,126 +22,44 @@ include('assets/inc/header.php');
 				<div id="portfolio" class="text-center animate_fade_in">
 
 
+					
 					<div class="row">
 
 						<ul class="sort-destination isotope" data-sort-id="isotope-list">
 
-
-														<!-- 1 --><li class="isotope-item col-sm-6 col-md-4 sport"><!-- item -->
-								<a class="popup-video" href="http://www.youtube.com/watch?v=i55Zs30ops8">
-									<img src="assets/images/1x1.png" class="img-responsive" data-src="holder.js/360x360/#676767:#555555/auto/" alt="img" />
+							<?php foreach(array_reverse($videos) as $video) { ; ?>
+								
+							<li class='isotope-item col-sm-6 col-md-4 <?php echo $video["type"]; ?>' 
+								style='<?php if($video["type"] == "sport") { echo "display:none;";}
+											 if($video["type"] == "business") { echo "display:none;";} 
+									   ?>'
+							><!-- item -->
+								<a class="popup-video" href='<?php echo $video["video"]; ?>'>
+									<img src='<?php echo $video["img"]; ?>' class="img-responsive" data-src="holder.js/#676767:#555555/auto/" alt="img" />
 									<div class="caption">
-									<!-- 
-										<h3>PROJECT TITLE</h3>
-										<p>Youtube Video</p> -->
+									
+										<h3><?php echo $video["name"]; ?></h3>
+										<p><?php echo $video["type"]; ?></p>
 									</div>
 								</a>
 							</li>
 
+							<?php } ?>
 
-							
 
-							<!-- 5 --><li class="isotope-item col-sm-6 col-md-4 life"><!-- item -->
-								<a class="popup-video" href="http://www.youtube.com/watch?v=BiuPb50E1vg">
+
+
+
+
+							<!-- <li class="isotope-item col-sm-6 col-md-4 sport" --><!-- item -->
+							<!-- 	<a class="popup-video" href="http://vimeo.com/23630702">
 									<img src="assets/images/1x1.png" class="img-responsive" data-src="holder.js/360x360/#676767:#555555/auto/" alt="img" />
 									<div class="caption">
-									<!-- 
-										<h3>PROJECT TITLE</h3>
-										<p>Youtube Video</p> -->
+									
+										
 									</div>
 								</a>
-							</li>
-
-							<!-- 6 --><li class="isotope-item col-sm-6 col-md-4 life"><!-- item -->
-								<a class="popup-video" href="http://www.youtube.com/watch?v=NVMO32rdffg">
-									<img src="assets/images/1x1.png" class="img-responsive" data-src="holder.js/360x360/#676767:#555555/auto/" alt="img" />
-									<div class="caption">
-									<!-- 
-										<h3>PROJECT TITLE</h3>
-										<p>Youtube Video</p> -->
-									</div>
-								</a>
-							</li>
-
-
-							<!-- 8 --><li class="isotope-item col-sm-6 col-md-4 life"><!-- item -->
-								<a class="popup-video" href="http://www.youtube.com/watch?v=9rTttFOWJV4">
-									<img src="assets/images/1x1.png" class="img-responsive" data-src="holder.js/360x360/#676767:#555555/auto/" alt="img" />
-									<div class="caption">
-									<!-- 
-										<h3>PROJECT TITLE</h3>
-										<p>Youtube Video</p> -->
-									</div>
-								</a>
-							</li>
-
-							<!-- 10 --><li class="isotope-item col-sm-6 col-md-4 life"><!-- item -->
-								<a class="popup-video" href="http://www.youtube.com/watch?v=g-jwWYX7Jlo">
-									<img src="assets/images/1x1.png" class="img-responsive" data-src="holder.js/360x360/#676767:#555555/auto/" alt="img" />
-									<div class="caption">
-									<!-- 
-										<h3>PROJECT TITLE</h3>
-										<p>Youtube Video</p> -->
-									</div>
-								</a>
-							</li>
-
-							<!-- 11 --><li class="isotope-item col-sm-6 col-md-4 life"><!-- item -->
-								<a class="popup-video" href="http://www.youtube.com/watch?v=vDW6WfoC3Xc">
-									<img src="assets/images/1x1.png" class="img-responsive" data-src="holder.js/360x360/#676767:#555555/auto/" alt="img" />
-									<div class="caption">
-									<!-- 
-										<h3>PROJECT TITLE</h3>
-										<p>Youtube Video</p> -->
-									</div>
-								</a>
-							</li>
-
-							<!-- 12 --><li class="isotope-item col-sm-6 col-md-4 life"><!-- item -->
-								<a class="popup-video" href="http://youtu.be/TFk-caWNPP8">
-									<img src="assets/images/1x1.png" class="img-responsive" data-src="holder.js/360x360/#676767:#555555/auto/" alt="img" />
-									<div class="caption">
-									<!-- 
-										<h3>PROJECT TITLE</h3>
-										<p>Youtube Video</p> -->
-									</div>
-								</a>
-							</li>
-
-							<!-- 13 --><li class="isotope-item col-sm-6 col-md-4 life"><!-- item -->
-								<a class="popup-video" href="http://www.youtube.com/watch?v=I76i-TCaUCY">
-									<img src="assets/images/1x1.png" class="img-responsive" data-src="holder.js/360x360/#676767:#555555/auto/" alt="img" />
-									<div class="caption">
-									<!-- 
-										<h3>PROJECT TITLE</h3>
-										<p>Youtube Video</p> -->
-									</div>
-								</a>
-							</li>
-
-							<!-- 16 --><li class="isotope-item col-sm-6 col-md-4 life"><!-- item -->
-								<a class="popup-video" href="http://www.youtube.com/watch?v=V6xLYt265ZM">
-									<img src="assets/images/1x1.png" class="img-responsive" data-src="holder.js/360x360/#676767:#555555/auto/" alt="img" />
-									<div class="caption">
-									<!-- 
-										<h3>PROJECT TITLE</h3>
-										<p>Youtube Video</p> -->
-									</div>
-								</a>
-							</li>
-
-							<!-- 17 --><li class="isotope-item col-sm-6 col-md-4 life"><!-- item -->
-								<a class="popup-video" href="http://www.youtube.com/watch?v=or_sJ_wrhQc">
-									<img src="assets/images/1x1.png" class="img-responsive" data-src="holder.js/360x360/#676767:#555555/auto/" alt="img" />
-									<div class="caption">
-									<!-- 
-										<h3>PROJECT TITLE</h3>
-										<p>Youtube Video</p> -->
-									</div>
-								</a>
-							</li>
-
-							
+							</li> -->
 
 
 
@@ -156,6 +77,7 @@ include('assets/inc/header.php');
 						</ul>
 					</div>
 
+				</div>
 				</div>
 
 			
